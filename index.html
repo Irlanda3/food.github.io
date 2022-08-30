@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Restaurant website temprate with html and css</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'>
+    
+    <!-- custom css file link-->
+    <link rel='stylesheet' type="text/css" href="style.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+
+</head>
+<body>
+    <!-- header section start-->
+    <header>
+        <a href="#" class="logo"><img src="logo.png"> </a>
+        
+        <nav class="navbar show_sidebar" >
+            <a href="#home" class="active">home</a> <!--el active no no lo estoy usando para nada-->
+            <a href="#about">about</a>
+            <a href="#menu">menu</a> <!--el proplema de cuando le doy click es que hay dos menus uno con id mas abajo por eos no aggara bien-->
+            <a href="#gallery">gallery</a>
+            <a href="#team">team</a>
+            <a href="#reservation">reservation</a> 
+        </nav>
+
+        <div class="icons" >
+            <i class="fas fa-bars" id="menu2"></i> <!--cambie a menu2 y ya cuando presiono menu va a menu -->
+            <i class="fas fa-search"></i>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </header>
+    <!-- header section end-->
+
+    <!-- slider section start-->
+    <div class="home" id="home">
+        <div class="swiper home-slider">  <!-- agregue swiper-->
+           <div class="swiper-wrapper wrapper">
+               <div class="swiper-slide slide slide1">
+                   <div class="content">
+                       <img src="crown-symbol.png">
+                       <h3>delicious royate</h3>
+                       <h1>gift voucher</h1>
+                       <p>
+                           give away your beloved customers
+                       </p>
+                       <a href="#" class="btn">order now</a>
+                   </div>
+               </div>
+
+               <div class="swiper-slide slide slide2">
+                   <div class="content">
+                       <img src="crown-symbol.png">
+                       <h3>sale of 10% this dish</h3>
+                       <h1>the fresh</h1>
+                       <p>
+                           food restaurant
+                       </p>
+                       <a href="#" class="btn">order now</a>
+                   </div>
+               </div>
+
+               <div class="swiper-slide slide slide3">
+                   <div class="content">
+                       <img src="crown-symbol.png">
+                       <h3>we are open</h3>
+                       <h1>fresh fruits</h1>
+                       <p>
+                           you will love it
+                       </p>
+                       <a href="#" class="btn">order now</a>
+                   </div>
+               </div> 
+               
+           </div>
+           
+           <div class="swiper-pagination"></div>
+
+        </div>
+   </div>
+   <!-- slider section ends-->
+
+
+    <section class="welcome" id="about">
+        <h1 class="heading">WELCOME TO OKOA DESIGNS</h1>
+        <center><h3 class="sub-heading"> ~ Luxury & Quality ~ </h3></center>
+
+        <div class="box-container">
+                <div class="box">
+                    <div class="image">
+                        <img src="image.jpg">
+                    </div>
+
+                    <div class="content">
+                        <h3>PROFESSIONAL LEVEL</h3>
+                        <P> HERE IT GOES ALL THE INFO AS A PARRAFO</P>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="image2.jpg">
+                </div>
+
+                <div class="content">
+                    <h3>THE MENU IS PLENTIFUL</h3>
+                    <P> HERE IT GOES ALL THE INFO AS A PARRAFO</P>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="image2.jpg">
+                </div>
+
+                <div class="content">
+                    <h3>FRESH FOOD GUARANTEED</h3>
+                    <P> HERE IT GOES ALL THE INFO AS A PARRAFO</P>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>     
+   </section>
+
+
+   <!-- menu food section starts-->
+    <section class="our-menu" id = "menu" >
+        <h1 class="heading">our food menu</h1>
+        <center><h3 class="sub-heading"> ~ see what we offer ~ </h3></center>
+
+        <div class="menu-container">
+            <div class="item">
+                <div class="item-name">
+                    <h2>Main Course</h2>
+                    <!--<img src="image2.jpg">  aqui necesito una foto chikita de menu de comida por eso lo comente-->
+                </div>
+
+                <div class="item-body">
+                    <div class="item-menu">
+                       <h3> Super-Delicious Zuppa Toscana</h3> 
+                       <span class="dots"></span>
+                       <h3>$50</h3>
+
+                       <menu>
+                            <li><a href="image.jpg">What does W3C do?</a></li>
+                            <li><a href="#">Chicken</a></li>
+                            <li><a href="#">Italian</a></li>
+                            <li><a href="#">Sausage</a></li>
+                            <li><a href="#">Spinach</a></li>
+                       </menu>
+                    </div>
+
+                    <div class="item-menu">
+                        <h3> Super-Delicious Comida Mexicana</h3> 
+                        <span class="dots"></span>
+                        <h3>$100</h3>
+ 
+                        <ul>
+                             <li><a href="#">Pozole</a></li>
+                             <li><a href="#">Italian</a></li>
+                             <li><a href="#">Sausage</a></li>
+                             <li><a href="#">Spinach</a></li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-name">
+                    <h2>Soups and Salads</h2>
+                    <!--<img src="image2.jpg">  aqui necesito una foto chikita de menu de comida por eso lo comente-->
+                </div>
+
+                <div class="item-body">
+                    <div class="item-menu">
+                       <h3> Super-Delicious Zuppa Toscana</h3> 
+                       <span class="dots"></span>
+                       <h3>$50</h3>
+
+                       <ul>
+                            <li><a href="#">Chicken</a></li>
+                            <li><a href="#">Italian</a></li>
+                            <li><a href="#">Sausage</a></li>
+                            <li><a href="#">Spinach</a></li>
+                       </ul>
+                    </div>
+
+                    <div class="item-menu">
+                        <h3> Super-Delicious Zuppa Toscana</h3> 
+                        <span class="dots"></span>
+                        <h3>$100</h3>
+ 
+                        <ul>
+                             <li><a href="#">Pozole</a></li>
+                             <li><a href="#">Italian</a></li>
+                             <li><a href="#">Sausage</a></li>
+                             <li><a href="#">Spinach</a></li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-name">
+                    <h2>Drinks</h2>
+                    <!--<img src="image2.jpg">  aqui necesito una foto chikita de menu de comida por eso lo comente-->
+                </div>
+
+                <div class="item-body">
+                    <div class="item-menu">
+                       <h3>Drinks</h3> 
+                       <span class="dots"></span>
+                       <h3>$50</h3>
+
+                       <ul>
+                            <li><a href="#">Chicken</a></li>
+                            <li><a href="#">Italian</a></li>
+                            <li><a href="#">Sausage</a></li>
+                            <li><a href="#">Spinach</a></li>
+                       </ul>
+                    </div>
+
+                    <div class="item-menu">
+                        <h3> Super-Delicious Zuppa Toscana</h3> 
+                        <span class="dots"></span>
+                        <h3>$100</h3>
+ 
+                        <ul>
+                             <li><a href="#">Pozole</a></li>
+                             <li><a href="#">Italian</a></li>
+                             <li><a href="#">Sausage</a></li>
+                             <li><a href="#">Spinach</a></li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-name">
+                    <h2>frutas</h2>
+                    <!--<img src="image2.jpg">  aqui necesito una foto chikita de menu de comida por eso lo comente-->
+                </div>
+
+                <div class="item-body">
+                    <div class="item-menu">
+                       <h3>Frutas</h3> 
+                       <span class="dots"></span>
+                       <h3>$50</h3>
+
+                       <ul>
+                            <li><a href="#">Chicken</a></li>
+                            <li><a href="#">Italian</a></li>
+                            <li><a href="#">Sausage</a></li>
+                            <li><a href="#">Spinach</a></li>
+                       </ul>
+                    </div>
+
+                    <div class="item-menu">
+                        <h3> Fruta design</h3> 
+                        <span class="dots"></span>
+                        <h3>$100</h3>
+ 
+                        <ul>
+                             <li><a href="#">Pozole</a></li>
+                             <li><a href="#">Italian</a></li>
+                             <li><a href="#">Sausage</a></li>
+                             <li><a href="#">Spinach</a></li>
+                        </ul>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <!-- menu section ends-->
+
+
+    <!-- gallery section starts-->
+    <section class="container" id="gallery">
+        <div class="heading">
+            <h3>Photo <span>Gallery</span></h3>
+        </div>
+        
+        <div class="photo-gallery">
+            <div class="pic place">
+                <img src="image2.jpg">
+            </div>
+            <div class="pic family">
+                <img src="image4.jpg">
+            </div>
+            <div class="pic child">
+                <img src="image5.jpg">
+            </div>
+            <div class="pic place">
+                <img src="image4.jpg">
+            </div>
+            <div class="pic family">
+                <img src="image4.jpg">
+            </div>
+            <div class="pic child">
+                <img src="image4.jpg">
+            </div>
+            <div class="pic place">
+                <img src="image4.jpg">
+            </div>
+            <div class="pic family">
+                <img src="image4.jpg">
+            </div>
+            <div class="pic child">
+                <img src="image4.jpg">
+            </div>
+
+
+        </div>
+    </section>
+    <!-- gallery section ends-->
+  
+
+   <!--team secccion starts-->
+    <section class="our-team" id="team">
+        <h1 class="heading">Team members</h1>
+        <center>
+            <h3 class="sub-heading"> Experience</h3>
+        </center>
+
+        <div class="our-chef">
+            <div class="item">
+                <div class="image">
+                    <img src="imageChef.jpg">
+                </div>
+
+                <div class="chef-info">
+                    <div>
+                        <h3>Armando Ochoa Andrade</h3>
+                        <span>Sous Chef</span>
+                        <!--<ul>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        </ul> -->
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="image">
+                    <img src="imageChef.jpg">
+                </div>
+
+                <div class="chef-info">
+                    <div>
+                        <h3>Armando "Conejo"</h3>
+                        <span>Line Cook</span>
+                        <!--<ul>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        </ul> -->
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="item">
+                <div class="image">
+                    <img src="imageChef.jpg">
+                </div>
+
+                <div class="chef-info">
+                    <div>
+                        <h3>Another member</h3>
+                        <span>Line Cook</span>
+                        <!--<ul>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        </ul> -->
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+   </section>
+   <!--team section ends-->
+   
+
+
+
+   <!--REsservation starts m58--> 
+   <div class="reservation" id="reservation">
+        <div class="image">
+
+        </div>
+        <div class="form">
+            <h1 class="heading">Book your event</h1>
+            <center><h3 class="sub-heading"> Check our prices</h3></center>
+            <form action="https://formspree.io/f/xjvzkdbg"
+            method="POST" >
+                <div class="form-holder">
+                    <div>
+                        <select>
+                            <option>10 people</option>
+                            <option>50 people</option>
+                            <option>100 people</option>
+                            <option>200 people</option>
+                        </select>
+
+                        <input type="text" name=" " placeholder="Time">
+                        <input type="text" name=" " placeholder="Phone">
+                    </div>
+
+                    <div>
+                        <input type="text" name=" " placeholder="Date">
+                        <input type="text" name="name" placeholder="Name">
+                        <input type="email" name="email" placeholder="Email">
+                        <label>
+                            Your message:
+                            <textarea name="message"></textarea>
+                          </label>
+                    </div>
+                </div>
+                <center><a href="#" class="btn">Book now</a></center>
+            </form>
+        </div>
+    </div>
+   <!--REsservation ends-->
+
+
+    <!--News section start new comment-->
+    <!--News section start-->
+
+
+    <!--footer section starts-->
+    <section class="footer">
+        <img src="logo.png" class="logo">
+
+        <div class="container">
+                <!--<div class="aboutus">
+                    <h3>ABOUT US</h3>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    </p>
+                </div>-->
+                <div class="contact">
+                    <h3>CONTACT US</h3>
+                    <span>(720) 645 0000</span>
+                    <span>custum@outlook.com</span>
+                </div>
+                <div class="icons">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+
+                
+            </div>
+        
+
+    </section>
+     
+    <!--footer section starts-->
+
+
+   <!-- Swiper JS -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+   <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".home-slider", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 7500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            loop: true,  
+            
+        });
+    </script>
+  <!-- end Swiper-->
+
+
+   <script>
+        let menu = document.querySelector('.icons'); /* cuando seleccione el div de icons selecciona todo*/
+        let navbar = document.querySelector('.navbar');
+
+        menu.addEventListener("click", function(){
+            if (menu.firstElementChild.classList.contains("fa-bars")){
+               
+                menu.firstElementChild.classList.replace("fa-bars", "fa-times");
+            }else{
+                menu.firstElementChild.classList.replace("fa-times", "fa-bars");
+            }
+            navbar.classList.toggle("show_sidebar");
+        })
+
+  
+    </script>
+</body>
+</html>
