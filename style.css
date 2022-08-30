@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root
+{
+    --black: #333;
+    --light-color: #cdaa7c;
+    --box-shadow: 0.5rem 1.5rem rgba(0,0,0,.1);
+}
+*
+{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html
+{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior:smooth;
+}
+/* navbar style start */  
+header
+{
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(1, 31, 41, 0.856); /*background: var(--black);*/
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    z-index: 10000;/*fue agregado con el swiper*/
+}
+header .logo img 
+{
+    height:fit-content;
+    max-height: 80px; /* to adjust logo size */
+}
+header .navbar a /* este le da el color a el menu de morado a dorado*/
+{
+    font-size: 2.7rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);
+    border: .1rem solid transparent;
+    
+
+}
+header .navbar a.active,
+header .navbar a:hover /*con esto cuando seleccionas el menu en grande se selecciona como  encerrado en cuadrado*/
+{
+    color: #fff;
+    border: .1rem solid rgba(205, 170, 124,0.2);
+    
+}
+header .icons i 
+{
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    background: var(--light-color);
+    text-align: center;
+    font-size: 1.7rem;
+    color: #fff;
+}
+header .icons i:hover /* es para que den vuetitas los iconos*/
+{
+    color: #fff;
+    background: var(--light-color);
+    transform: rotate(360deg);
+}
+
+header .icons #menu/*es para que no salga el menu de barras en pantalla grande nadamas. ya en el media query se hace el display de abierto en pantalla chica*/ 
+{
+   display: none; /*este esconde el bar menu en pantalla grande por su id=menu*/ 
+}
+
+/* navbar style ends here */
+
+/* slider style start */
+.home .home-slider .slide
+{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content:flex-start;
+}
+.home .home-slider .slide1
+{   
+    background-image: url(slideshow-9.jpg); 
+    
+} 
+.home .home-slider .slide2
+{
+    background-image: url(slideshow-8.jpg);
+   
+}
+.home .home-slider .slide3
+{
+    background-image: url(slideshow-11.jpg);
+} 
+.home .home-slider .slide1,
+.home .home-slider .slide2,
+.home .home-slider .slide3
+{
+    background-size:cover;
+    background-repeat: no-repeat;
+   
+}
+.home .home-slider .slide .content
+{
+    text-align: center;
+    padding-left: 9rem;
+}
+.home .home-slider .slide .content h3
+{
+    color: var(--light-color);
+    font-size: 3rem; /* es el font size de todos los slider font*/
+    font-weight: 300; /*me dice que tan bold o delgada la letra*/
+}
+.home .home-slider .slide .content h1 
+{
+    color: #fff;
+    font-size: 8rem;
+}
+.home .home-slider .slide .content p 
+{
+    color: #e6e7e7; 
+    font-size: 1.8rem;
+    letter-spacing: 10px;
+    padding: .5rem 0;
+    line-height: 1.5;
+    font-weight: 200;
+}
+.btn
+{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: rgb(255, 255, 255);
+    border: .1rem solid rgba(205, 170, 124, 10);
+    background: transparent;
+    cursor: pointer; /*para que me aparesca una manita de seleccionar*/
+    padding: .8rem 3rem;
+    position: relative; 
+    overflow: hidden;
+    z-index: 1;
+}
+.btn:before /*este es un button amarillo pero no entendi bien*/
+{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--light-color);
+    z-index: -1; /*con este me salen las letras blancas de order now*/
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: .5s;
+
+}
+.btn:hover.btn:before
+{
+    left: 0;
+}
+.swiper-pagination-bullet /*parte de swiper*/
+{
+    background: var(--light-color) !important;
+    width: 15px!important;
+    height: 15px!important;
+    border-radius: 0!important;
+}
+/* slider style ends */
+
+
+
+/*WELCOME style starts*/
+section
+{
+    padding: 8rem 9%;
+}
+.heading
+{
+    text-align: center;
+    color: var(--black);
+    font-size: 4.5rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+}
+.sub-heading
+{
+    text-align: center;
+    color: var(--light-color);
+    font-size: 2.5rem;
+    padding: .5rem 10rem;
+    font-weight: 300;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    background: var(--black);
+    display: inline-block;     
+}
+.welcome .box-container
+{
+    display: flex;
+    gap: 1.5rem;
+}
+.welcome .box-container .box
+{
+    width: 33%;
+    background: var(--black);
+    box-shadow: var(--black);
+    text-align: center;
+    padding-bottom: 1%;
+}
+.welcome .box-container .box .image
+{
+    height: 25rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.welcome .box-container .box .image img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+}
+.welcome .box-container .box .image:hover img
+{
+    transform: scale(1.1);
+}
+.welcome .box-container .box .content
+{
+    padding: 2rem;
+    padding-top: 2rem;
+}
+.welcome .box-container .box .content h3 
+{
+    color: var(--light-color);
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+.welcome .box-container .box .content p 
+{
+     color: #fff;
+     font-size: 1.4rem;
+     font-weight: 300;
+     padding: .5rem 0;
+     line-height: 1.5;   
+}
+/*WELCOME style ends*/
+
+/* Menu style starst*/
+.our-menu
+{
+    /**background: url(image3.jpg) left top no-repeat  /*,url(image4.jpg);*/ 
+    
+    /*background-size: cover; */
+    position: relative; /*si le quito este no me sale ninguna imagen*/
+    
+}
+.our-menu:after
+{
+    content: " ";
+    background: url(image3.jpg);
+    opacity: 0.30;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+    position:absolute;/*si le pongo fixed que la foto por debajo de todas las secciones que tiene bacground blanco muy bonito */
+    z-index: -1;   /*con este las letras resaltan y la imagen queda por abajo*/
+}
+.our-menu .menu-container
+{
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns:auto auto; /* con el auto me funcionaron las columnas ami*/
+    gap: 5rem 10rem;
+}
+.our-menu .menu-container .item .item-name
+{
+    display: flex; 
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin-top: .5rem 0;
+}
+.our-menu .menu-container .item .item-menu /*segun deberia ser .menu-item pero es trampa no me parece cierto*/
+{
+    padding: .5rem 0;
+}
+.our-menu .menu-container .item .item-name h2
+{
+    font-size: 3rem;
+    color: #040403;
+    font-weight: 700;
+    
+}   
+.our-menu .menu-container .item .item-menu h3
+{
+    font-size: 2rem;
+    color: #414d13;
+    font-weight: 600;
+    display: inline-block;/*con este el precio aparece junto con otra linea de texto de comida*/
+}
+.our-menu .menu-container .item .item-menu span
+{
+    width: 37%;
+    display: inline-block;
+    border: 1px dotted #9bb72e;
+}
+.our-menu .menu-container .item .item-menu ul 
+{
+    display: flex;
+    font-size: 1.5rem;
+    list-style: none;
+    padding: .8rem 0;
+    font-weight: 200;
+}
+.our-menu .menu-container .item .item-menu ul li a
+{
+    color: #220101;
+}
+/* Menu style ends*/
+
+
+/*Photo gallery starts*/
+.container /*esto aplica a todo lo que esta en container*/
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: sans-serif;
+text-align: center;
+width: 100%;
+background-color: goldenrod;
+}
+.container .heading h3
+{
+    position:relative;
+    font-size: 70px; 
+    font-weight: bolder;
+    padding-bottom: 20px;
+    color: rgb(16, 9, 9);
+    margin-top: 30px;
+    margin-bottom: 40px;
+    
+}
+.container .heading h3::before/*si le pongo before la linea la pone abajo si no le pongo nada la pone por arriva*/
+{
+    content: " ";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    border: 5px; /* anchula de la linea*/
+    background-color: rgb(222, 226, 19);
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+    
+}
+
+
+.container .heading h3 span
+{
+    font-weight: 100;/*so the gallery is not bold*/
+   
+}
+@keyframes animate {
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 400px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+.container .photo-gallery
+{
+    width: 90%;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px; /*gap vertical*/
+    padding-bottom: 20px;/*por que quedaba muy cerquita la ultima foto del la bottom orilla*/
+}
+.container .photo-gallery img:hover
+{
+    transform: scale(1.1);
+}
+/* llamamos la clase pic para llamar las fotos */
+.pic
+{
+    position: relative;
+    height: auto;/*nos dice que tan altas son las fotos  con auto es su valor normal*/
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightgray;
+    cursor: pointer;
+}
+.pic img /*sin eso no queda un tamano adeacudo de foto en pantalla*/
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover; /*no importa el tamano de la photo se veran bien*/
+    
+}
+/*Photo gallery ends/
+
+
+/*Chef Style team starts*/
+.our-chef
+{ /*si le pongo flex salen las imagines todas en linea horizontal*/
+   display: flex;
+   flex-direction: row;
+}
+.our-chef .item .image 
+{
+    flex-basis: 33.33%;
+    padding: 0px;
+    box-sizing: border-box; /*also include the border size in padding*/
+}
+.our-chef .item .image img
+{
+   width: 100%; /*to cover the total of the size I said*/
+}
+.our-chef .item
+{
+    position: relative; /*relative to its normal position*/
+    z-index: 2;
+    overflow: hidden;
+}
+.our-chef .item:before /* este no me queda  bien para que lo es*/
+{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0;left: 0;right: 0;bottom: 0;
+    background: rgba(0, 0, 0, .1);
+    z-index: 5;
+}
+.our-chef .item:hover.item::before  /*esete va asi todo pegado para que funcione como lo sombriado de las fotos cuando paso*/
+{
+    display: block;
+}
+.our-chef .item .chef-info
+{
+    justify-content: center;
+    text-align: center;
+    transition: 1s;
+    align-items: center;
+    cursor: pointer;
+}
+.our-chef .item .chef-info h3
+{
+    font-size: 1.7rem;
+    color: black;
+    padding: .8rem 0;
+    text-transform: uppercase;
+}/*min 55*/
+.our-chef .item .chef-info span
+{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    letter-spacing: 1px;
+    font-weight: 300;
+}  
+.our-chef .item .chef-info ul 
+{
+    list-style: none; /*con esto a los iconos se les kitan los bullets*/
+    display: flex; /*los instagram y icos esos ya no estan en linea vertical enmedio ahora empiezan en ezq*/
+    grid-gap: 2rem;
+    padding: 3rem 0;
+}
+.our-chef .item .chef-info ul li a
+{
+    color:#333;
+    font-size: 1.8rem;
+    
+}
+/*Chef Style team ends/
+
+
+
+/*Reservation style starts*/
+.reservation
+{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.reservation .image
+{
+    width: 55%;
+    background: url(book.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 9rem
+}
+.reservation .form
+{
+    background: #181818;
+    width: 45%;/*hasta que no arregle 45% aaqui y arriba 55 ya se vio bien*/
+    padding: 9rem 7%;
+}
+.reservation .form h1
+{
+    color: #fff;
+}
+.reservation .form-holder
+{
+    display: flex;
+    grid-gap: 3rem;
+    width: 100%;
+}
+.reservation .form form input,
+.reservation .form form select
+{
+    display: block;
+    margin: 2rem 0;
+    width: 100%;
+    background: none;
+    border-bottom: .1rem solid #b7b3b3;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.reservation .form form input:placeholder /*no esntendi este que hacee no veo nada*/
+{
+    color:#b7b3b3; 
+}
+/*Reservation style ends  */
+
+
+/*footer style starts*/
+.footer
+{
+    background-color: goldenrod;
+   
+    /*color: #b2b2b2;*/
+    font-size: 1.3rem;
+    width: 100%;
+}
+.footer .container /*display de content in 3 columns pero no funciona*/
+{
+    display: flex;
+    color: black;
+    grid-gap: 1rem;
+    padding: 4rem 0;
+    border-bottom: 1px solid black;
+}
+.footer .logo
+{
+    width: 10%;
+}
+.footer .container .contact
+{
+    width: 50%;
+   
+    
+}
+.footer .container .icons
+{
+    width: 50%;
+   
+    
+}
+.footer .container h3 
+{
+    color: #fff;
+    font-size: 1.5rem;
+    padding-bottom: .8rem;
+}
+.footer .container ul /*con este ya se ponen os iconos horizontales*/
+{
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+.footer .container ul li a 
+{
+    color: whitesmoke;
+    margin-left: 10px;
+    font-size: 20px
+
+}
+.footer .container span 
+{
+    display:block;
+    
+}
+
+/*footer style ends*/
+
+
+/* media query */
+@media (max-width: 991px)
+{
+    html 
+    {
+        font-size: 55%;    
+    }
+    header 
+    {
+        padding: 1rem 2rem;
+    }
+    header .logo img
+    {
+        height: 7rem;
+    }
+    .our-menu .menu-container
+    {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 2fr));
+    }
+    .our-menu .menu-container .item .item-menu span
+    {
+        width: 15%;
+    }
+
+}
+@media (max-width: 768px)
+{
+    /* navbar media query */
+    header .logo img
+    {
+        height: 5rem;
+    }
+    header .icons #menu
+    {
+        display: inline-block;  
+        
+    }
+    header .navbar
+    {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(205, 170, 124, 0.2);
+        border-bottom: .1rem solid rgba(205, 170, 124, 0.2);
+        padding: 1rem;
+        transform: translate(0%); /*este 0$ hace que cuando le de click me aparesca todo el menu*/
+        /*transform: translate(0%)!important;*/ /* este hace que el menu navbar se desapar*/
+        transition: 0.3s;
+        
+    }
+    .show_sidebar{
+        transform: translate(100%) !important; /*con este se esconde el menu*/
+    }
+    header .navbar a
+    {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: var(--black);
+        transition: all ease;
+        
+    }
+
+    /*slider media query*/
+    .home .home-slider .slide
+    {
+         
+        justify-content: center;
+        height: 80vh; /* este es raro por que la pantalla se ve corta con esto2*/
+    }
+    .home .home-slider .slide .content
+    {
+        padding: 0;
+    }
+    .home .home-slider .slide h1
+    {
+        font-size: 7rem;
+    }
+
+    /*welcome section*/
+    .welcome .box-container /*con este y el .box de abajo cuando la pantalla chica los cuadritos se estienden en linea vertical*/
+    {
+        flex-wrap: wrap;
+    }
+    .welcome .box-container .box
+    {
+        width: 100%;
+    }
+    /*reservation section*/
+    .reservation .image
+    {
+        display: none; /*cambie este por q si le ponia width 0; detodasmaneras salia una imagen chikita*/
+    }
+    .reservation .form
+    {
+        width: 100%;
+    }
+    .reservation .form .form-holder
+    {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 769px)
+{
+    .container .photo-gallery img {
+        display: flex;
+        width: 100%;
+        
+    }
+    .container .heading h3::before
+    {
+        border: 10px;
+    }
+    @keyframes animate {
+        0%{
+            width: 100px;
+        }
+        50%{
+            width: 200px;
+        }
+        100%{
+            width: 100px;
+        }
+    }
+}
+@media only screen and (max-width: 643px)
+{
+    .container .heading{
+        width: 100%;
+        
+    }
+    .container .heading h3
+    {
+        font-size: 1em;
+    }
+}
