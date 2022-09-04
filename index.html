@@ -133,8 +133,8 @@
 
    <!-- menu food section starts-->
     <section class="our-menu" id = "menu" >
-        <h1 class="heading">our food menu</h1>
-        <center><h3 class="sub-heading"> ~ see what we offer ~ </h3></center>
+        <h1 class="heading">menu</h1>
+        <center><h3 class="sub-heading">  high quality  </h3></center>
 
         <div class="menu-container">
             <div class="item">
@@ -403,17 +403,18 @@
 
 
    <!--REsservation starts m58--> 
-   <div class="reservation" id="reservation">
+   <div class="reservation" id="reservation" >
         <div class="image">
 
         </div>
         <div class="form">
             <h1 class="heading">Book your event</h1>
-            <center><h3 class="sub-heading"> Check our prices</h3></center>
+            <!--<center><h3 class="sub-heading"> Check our prices</h3></center>-->
+
             <form action="https://formspree.io/f/xjvzkdbg"
-            method="POST" >
+            method="POST">
                 <div class="form-holder">
-                    <div>
+                    <!--<div>
                         <select>
                             <option>10 people</option>
                             <option>50 people</option>
@@ -421,21 +422,20 @@
                             <option>200 people</option>
                         </select>
 
-                        <input type="text" name=" " placeholder="Time">
-                        <input type="text" name=" " placeholder="Phone">
-                    </div>
+                        <input type="text" name="time" placeholder="Time">
+                        <input type="text" name="phone" placeholder="Phone">
+                    </div> -->
 
                     <div>
-                        <input type="text" name=" " placeholder="Date">
-                        <input type="text" name="name" placeholder="Name">
-                        <input type="email" name="email" placeholder="Email">
-                        <label>
-                            Your message:
-                            <textarea name="message"></textarea>
-                          </label>
+                        <input type="text" placeholder="Date" name="date">
+                        <input type="text" placeholder="Name" name="name">
+                        <input type="email" placeholder="Email" name="email">
+                        
+                           
                     </div>
                 </div>
-                <center><a href="#" class="btn">Book now</a></center>
+                <button id ="enviar" type="submit">Send</button>
+                <center><a href="#enviar" class="btn">Book now</a></center>
             </form>
         </div>
     </div>
@@ -467,6 +467,7 @@
                         <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <a href="https://wa.me/1720095" target="_blank">Link Text Here</a>
                     </ul>
                 </div>
 

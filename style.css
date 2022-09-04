@@ -3,7 +3,7 @@
 :root
 {
     --black: #333;
-    --light-color: #cdaa7c;
+    --light-color: goldenrod;/*#cdaa7c;*/
     --box-shadow: 0.5rem 1.5rem rgba(0,0,0,.1);
 }
 *
@@ -46,7 +46,7 @@ header .logo img
 }
 header .navbar a /* este le da el color a el menu de morado a dorado*/
 {
-    font-size: 2.7rem;
+    font-size: 2.2rem;
     padding: .5rem 1.5rem;
     color: var(--light-color);
     border: .1rem solid transparent;
@@ -260,26 +260,33 @@ section
 }
 /*WELCOME style ends*/
 
+
 /* Menu style starst*/
 .our-menu
 {
-    /**background: url(image3.jpg) left top no-repeat  /*,url(image4.jpg);*/ 
-    
-    /*background-size: cover; */
-    position: relative; /*si le quito este no me sale ninguna imagen*/
-    
+    background-image: url(orange.jpeg);/*con este le pongo una imagen de fondo junto background-size: cover;*/
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+.our-menu h1 
+{
+    font-family: cursive;/*este se lo agregue al gusto*/
+    font-size: 13rem;
+    color: goldenrod;
+    font-weight: 700;
+}
+
 .our-menu:after
 {
     content: " ";
-    background: url(image3.jpg);
-    opacity: 0.30;
+    
+    /*opacity: 0.30;*/
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    background-size: cover;
-    position:absolute;/*si le pongo fixed que la foto por debajo de todas las secciones que tiene bacground blanco muy bonito */
+    /*position:absolute;/*si le pongo fixed que la foto por debajo de todas las secciones que tiene bacground blanco muy bonito */
     z-index: -1;   /*con este las letras resaltan y la imagen queda por abajo*/
 }
 .our-menu .menu-container
@@ -302,9 +309,11 @@ section
 }
 .our-menu .menu-container .item .item-name h2
 {
+    font-family: cursive;/*este se lo agregue al gusto*/
     font-size: 3rem;
-    color: #040403;
+    color: whitesmoke;
     font-weight: 700;
+
     
 }   
 .our-menu .menu-container .item .item-menu h3
@@ -318,7 +327,7 @@ section
 {
     width: 37%;
     display: inline-block;
-    border: 1px dotted #9bb72e;
+    border: 1px dotted wheat;
 }
 .our-menu .menu-container .item .item-menu ul 
 {
@@ -330,7 +339,7 @@ section
 }
 .our-menu .menu-container .item .item-menu ul li a
 {
-    color: #220101;
+    color: #b98500;
 }
 /* Menu style ends*/
 
@@ -338,21 +347,21 @@ section
 /*Photo gallery starts*/
 .container /*esto aplica a todo lo que esta en container*/
 {
-margin: 0;
-padding: 0;
+
 box-sizing: border-box;
 font-family: sans-serif;
 text-align: center;
 width: 100%;
-background-color: goldenrod;
+background-color: black;/* goldenrod;*/
 }
+
 .container .heading h3
 {
     position:relative;
     font-size: 70px; 
     font-weight: bolder;
     padding-bottom: 20px;
-    color: rgb(16, 9, 9);
+    color: goldenrod;
     margin-top: 30px;
     margin-bottom: 40px;
     
@@ -364,7 +373,7 @@ background-color: goldenrod;
     width: 100px;
     height: 3px;
     border: 5px; /* anchula de la linea*/
-    background-color: rgb(222, 226, 19);
+    background-color: goldenrod;
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
@@ -383,7 +392,7 @@ background-color: goldenrod;
         width: 100px;
     }
     50%{
-        width: 400px;
+        width: 200px;
     }
     100%{
         width: 100px;
@@ -395,7 +404,7 @@ background-color: goldenrod;
     margin: auto;
     display:grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px; /*gap vertical*/
+    grid-gap: 55px; /*gap  wntre fotos vertical*/
     padding-bottom: 20px;/*por que quedaba muy cerquita la ultima foto del la bottom orilla*/
 }
 .container .photo-gallery img:hover
@@ -516,7 +525,7 @@ background-color: goldenrod;
 }
 .reservation .form
 {
-    background: #181818;
+    background: #000930;
     width: 45%;/*hasta que no arregle 45% aaqui y arriba 55 ya se vio bien*/
     padding: 9rem 7%;
 }
@@ -560,14 +569,16 @@ background-color: goldenrod;
 .footer .container /*display de content in 3 columns pero no funciona*/
 {
     display: flex;
-    color: black;
+    background: goldenrod;
+    color: whitesmoke;
     grid-gap: 1rem;
     padding: 4rem 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(101, 82, 0);
 }
 .footer .logo
 {
     width: 10%;
+    
 }
 .footer .container .contact
 {
